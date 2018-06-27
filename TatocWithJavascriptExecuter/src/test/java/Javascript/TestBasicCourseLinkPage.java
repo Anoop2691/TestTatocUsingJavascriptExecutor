@@ -14,6 +14,5 @@ public class TestBasicCourseLinkPage {
 		jsDriver.executeScript("document.querySelector(\".page>a\").click();");
 		String response=(String) jsDriver.executeScript("return document.querySelector(\'.page>h1\').textContent");
 		Assert.assertEquals(response, "Grid Gate");
-		System.out.println("Basic Course clicked");
 	}
 }

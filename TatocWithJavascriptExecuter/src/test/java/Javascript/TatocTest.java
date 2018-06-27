@@ -26,37 +26,37 @@ public class TatocTest {
 		jsDriver.executeScript("window.location='http://10.0.1.86/tatoc\'");
 	}
 	@Test
-	public void Step_01_Click_on_Basic() {
+	public void Page1ClickOnBasicCourse() {
 		TestBasicCourseLinkPage=new TestBasicCourseLinkPage(jsDriver);
 		TestBasicCourseLinkPage.navigate_To_Basic();
 	}
 	@Test
-	public void Step_02_Grid_Gate() {
+	public void Page2ClickOnGreenGridInGridPage() {
 		TestGridGatePage=new TestGridGatePage(jsDriver);
-		TestGridGatePage.greenBox();
+		TestGridGatePage.clickOnGreenBox();
 	}
 	@Test
-	public void Step_03_Frame_Dungeon() throws InterruptedException {
+	public void Page3ClickOnProceedWhenColorMatches() throws InterruptedException {
 		TestFrameDungeonPage=new TestFrameDungeonPage(jsDriver);
-		TestFrameDungeonPage.sameColor();
+		TestFrameDungeonPage.clickWhenSameColorComesInBothFrameBox();
 	}
 	
 	@Test
-	public void Step_04_Drag_Around() {
+	public void Page2ClickOnProceedWhenDragboxIsInDropbox() {
 		TestTestDragAroundPagePage=new TestDragAroundPage(jsDriver);
-		TestTestDragAroundPagePage.dragBox();
+		TestTestDragAroundPagePage.dragBoxIntoDropbox();
 	}
 	
 	@Test
-	public void Step_05_Pop_Up() throws InterruptedException {
+	public void Page5ClickOnproceedAfterEnteringTextInPopUpWindow() throws InterruptedException {
 		TestWindowsPage=new TestWindowsPage(jsDriver);
-		TestWindowsPage.PopUpClick(driver);
+		TestWindowsPage.generatePopUpWindowAddTextAndProceed(driver);
 	}
 	
 	@Test
-	public void Step_06_TestCookieHandlingPage_page() {
+	public void Page6ClickOnProceedAfterGeneratingAndAddingCookie() {
 		TestCookieHandlingPage =new TestCookieHandlingPage(jsDriver);
-		TestCookieHandlingPage.creating_cookie();
+		TestCookieHandlingPage.creatingAndAddingCookie();
 	}
 	
 	@AfterClass

@@ -11,10 +11,9 @@ public class TestGridGatePage {
 		this.jsDriver=jsDriver;
 	}
 	
-	public void greenBox() {
+	public void clickOnGreenBox() {
 		jsDriver.executeScript("document.getElementsByClassName(\'greenbox\')[0].click();");
 		String response=(String) jsDriver.executeScript("return document.querySelector(\'.page>h1\').textContent");
 		Assert.assertEquals(response, "Frame Dungeon");
-		System.out.println("Green Box Clicked");
 	}
 }

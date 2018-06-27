@@ -13,7 +13,7 @@ public class TestWindowsPage {
 		this.jsDriver=jsDriver;
 	}
 	
-	public void PopUpClick(WebDriver driver) throws InterruptedException {
+	public void generatePopUpWindowAddTextAndProceed(WebDriver driver) throws InterruptedException {
 
 		jsDriver.executeScript("document.querySelector('body > div > div.page > a:nth-child(4)').click()");
 	     String parentWindow=driver.getWindowHandle();
@@ -23,14 +23,12 @@ public class TestWindowsPage {
 	    	 subWindow=h;
 	     }	     
 	     driver.switchTo().window(subWindow);
-	     System.out.println(driver.getCurrentUrl());
 	     jsDriver.executeScript("document.getElementById('name').value='abc'");
 	     jsDriver.executeScript("document.getElementById('submit').click()");
 	     driver.switchTo().window(parentWindow); 
 	     jsDriver.executeScript("document.querySelector('body > div > div.page > a:nth-child(6)').click()");
 	     String response=(String) jsDriver.executeScript("return document.querySelector(\'.page>h1\').textContent");
 			Assert.assertEquals(response,"Cookie Handling");
-			System.out.println("Pop Up executed successfully");
 		
 	}
 

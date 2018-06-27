@@ -10,7 +10,7 @@ public class TestCookieHandlingPage {
 		this.jsDriver=jsDriver;
 	}
 
-	public void creating_cookie() {
+	public void creatingAndAddingCookie() {
 		jsDriver.executeScript("document.querySelector('body > div > div.page > a:nth-child(8)').click()");
 		String value=(String) jsDriver.executeScript("return document.getElementById(\"token\").innerHTML");
 		  Cookie ck=new Cookie("Token", value.substring(value.indexOf(":")+2));
@@ -18,7 +18,6 @@ public class TestCookieHandlingPage {
 		  jsDriver.executeScript("document.querySelector('body > div > div.page > a:nth-child(10)').click()");
 		  String response=(String) jsDriver.executeScript("return document.querySelector(\'.page>h1\').textContent");
 			Assert.assertEquals(response,"End");
-			System.out.println("Cookie Page executed successfully");
 	}
 
 }
