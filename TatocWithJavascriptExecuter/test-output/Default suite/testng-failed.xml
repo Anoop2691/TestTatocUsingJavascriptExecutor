@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="Javascript.TatocTest">
+        <methods>
+          <include name="Step_03_Frame_Dungeon"/>
+          <include name="Step_01_Click_on_Basic"/>
+          <include name="Step_06_TestCookieHandlingPage_page"/>
+          <include name="Step_02_Grid_Gate"/>
+          <include name="LaunchBrowser"/>
+          <include name="Step_05_Pop_Up"/>
+          <include name="Step_04_Drag_Around"/>
+        </methods>
+      </class> <!-- Javascript.TatocTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
